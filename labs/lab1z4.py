@@ -50,9 +50,43 @@ def task5():
         speed_all = (mass_2 * speed_2 - mass_1 * speed_1) / (mass_2 + mass_1)
         print("Тележки движутся в направлении второй тележки со скоростью", speed_all)
 def task6():
-    s_pov_kub = float(input())
-    x = sqrt(s_pov_kub/6*pi)
-    s_shar = pi ** x
+    s_pov_kub = float(input('Введите площадь поверхности куба: '))
+    st_kuba = sqrt(s_pov_kub/6)
+    s_pov_shar = 4 * pi * (st_kuba/2)**2
+    print("Площадь поверхности шара равна:",s_pov_shar)
+
+def task7():
+    print("Введите коэффициенты для уравнения: ax^2 + bx + c = 0:")
+    a = float(input("a = "))
+    b = float(input("b = "))
+    c = float(input("c = "))
+    dis = b ** 2 - 4 * a * c
+
+    if dis > 0:
+        x1 = (-b + sqrt(dis)) / (2 * a)
+        x2 = (-b - sqrt(dis)) / (2 * a)
+        print("x1 = %.2f \nx2 = %.2f" % (x1, x2))
+    elif dis == 0:
+        x = -b / (2 * a)
+        print("x = %.2f" % x)
+    else:
+        print("Корней нет")
+
+def task8():
+    g = 9.81
+    h1 = float(input('Введите первую высоту: '))
+    h2 = float(input('Введите вторую высоту: '))
+    v0 = (h2 - h1) * sqrt(g / (2 * h1))
+    print("Начальная скорость второго тела равна:", v0)
+
+
+def task9():
+    money = float(input("Введите требующуюся сумму: "))
+    months = float(input("Введите период за который требуется накопить сумму: "))
+    platezh = money / months
+    print("Чтобы накопить", money, "за", months, "месяцев, необходимо пополнять ежемесячно счет на", platezh)
+task9()
+
 
 
 
