@@ -1,5 +1,4 @@
 from math import *
-import matplotlib as plt
 def task1():
     while True:
         a = float(input('Введите число: '))
@@ -27,7 +26,35 @@ def task2():
         else:
             return sin(x)+cos(x)-1 and plt.plot(f(x),sin(x)*cos(x))
     print(f(x), plt.show())
-task2()
+def decimnal_in_new_numeal_system(number,base):
+    t = 1
+    d = 0
+    while number > 0:
+         d = d + (number % base) * t
+         t = t * 10
+         number = number // base
+    return d
+def task3():
+    osn = int(input('Введите систему счисления: ' ))
+    print(decimnal_in_new_numeal_system(float(input('Введите число в десятичной С.С.: ')),osn))
+def task5():
+    a = str(input('Введите первое число: '))[-1:]
+    b = str(input('Введите второе число: '))[-1:]
+    c = str(input('Введите третье число: '))[-1:]
+    d= int(a) + int(b) + int(c)
+    if d % 2 == 0:
+        print('Сумма последних цифр заданных чисел чётная')
+        if int(str(d)[-1:])%2 == 0:
+            print("Последняя цифра суммы чётная")
+        else:
+            print("Последняя цифра суммы нечётная")
+    else:
+        print('Сумма последних цифр заданных чисел нечётная')
+def task6():
+    labs = int(input('Введите количество несданных лабораторных работ: '))
+    consultations_per_month = int(input('Введите количество посещённых консультаций в месяц: '))
+    attemps = int(input('Введите количество попыток до сдачи лабораторной работы: '))
+
 
 
 
