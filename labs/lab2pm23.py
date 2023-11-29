@@ -1,3 +1,4 @@
+from matplotlib import *
 from math import *
 def task1():
     while True:
@@ -37,6 +38,11 @@ def decimnal_in_new_numeal_system(number,base):
 def task3():
     osn = int(input('Введите систему счисления: ' ))
     print(decimnal_in_new_numeal_system(float(input('Введите число в десятичной С.С.: ')),osn))
+def task4():
+    x = float(input('x: '))
+    y = float(input('y: '))
+    one = ((y >= (-x)-6) and (y <= x + 4) and (y >= 2*x + 6)) or ((y >= x) and (y <= ((-0.5) * x - 1.5)) and (y >= (-2) * x - 6 )) or ((y <= 1.5 * x - 5.5) and (y >= (1/3)*x + (1/3)) and x == (-1)) or ((y <= -x + 10) and (y <= (5/6)*x + (5/6)) and (y>= x-2) and (y>= (1/3)*x + (2/3)) and (y >= 0.5*x+0.5)) or (y <= sqrt(4 - (x + 1)**2)) or (not((y <= (5/6)*x + (5/6)) and (y >= (1/3)*x + (1/3)) and x==5))
+    two = (y<= 0.5 * x -5)
 def task5():
     a = str(input('Введите первое число: '))[-1:]
     b = str(input('Введите второе число: '))[-1:]
