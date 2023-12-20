@@ -60,7 +60,19 @@ def task6():
     labs = int(input('Введите количество несданных лабораторных работ: '))
     consultations_per_month = int(input('Введите количество посещённых консультаций в месяц: '))
     attemps = int(input('Введите количество попыток до сдачи лабораторной работы: '))
-
-
-
-
+def task8():
+    EPS = 1e-3
+    n = 1000
+    i = 1
+    sum = 0
+    while i < n:
+        a_i = 1 ** (i + 1) / i
+    sum += a_i
+    if abs(a_i) < EPS:
+        print("На {0}-ом шаге была получена сумма {2}".format(i,summa, EPS))
+def task9():
+  i = 1
+  n1 = 8
+  j = 1
+  sum = 0
+  while 
